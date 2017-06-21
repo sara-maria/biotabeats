@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+         <!-- Declare the character set of the document -->
+        <meta charset="UTF-8">
+         <!-- Support IE9-IE10 -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <!-- Set the viewport -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- Page Info -->
+        <title>Biota Beats</title>
+        <meta name="author" content="Sara Maria Sprinkhuizen">
+        <meta name="description" content="Biota Beats - A microbial record player developed by the EMW Street Bio team.">
+        <meta property="og:image" content="./BB_images/BiotaBeats_screenshot.png">
+        <meta name="keywords" content="Biota,Beats,microbiome,microbiota,bacteria,EMW,Street,Bio,record,player,DJ,music,art,data art">
+        
+            <!-- Google Fonts -->
+            <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+
+            <!-- Styling -->
+            <link href="./stylesheets/BB_style.css" rel="stylesheet">   
+        
+             <!-- Javascripts -->
+            <!-- <script type="text/javascript" src="./d3/d3.min.js"></script>-->
+            <script src="http://d3js.org/d3.v3.min.js"></script>
+		    <script src="./javascripts/analytics.js"></script>
+            <script src="./javascripts/BB_equalizer-app.js"></script>
+            <script src="./javascripts/BB_prep.js"></script>
+            <script src="./javascripts/BB_grow_colonies.js"></script>
+
+<!--------------------------------------------------------------------------->
+<!--    MUSIC EQUALIZER                                   ------------------->            
+<!--    Based on work from Garry Smith                                     -->
+<!--    https://www.bignerdranch.com/blog/music-visualization-with-d3-js/  -->
+<!--------------------------------------------------------------------------->  
+<!-- Prepare audioelements to be called later:-->
+        <audio id="audioElementFee" class="audiobutton" src="./BB_music/1-feet-track7-starttime0.mp3"></audio>
+        <audio id="audioElementGen" class="audiobutton" src="./BB_music/2-genitalia-track6-starttime0.mp3"></audio>
+        <audio id="audioElementBel" class="audiobutton" src="./BB_music/3-belly_track9-starttime0.mp3"></audio>
+        <audio id="audioElementArm" class="audiobutton" src="./BB_music/4-armpit_track8_starttime0.mp3"></audio>
+        <audio id="audioElementMou" class="audiobutton" src="./BB_music/5-mouth-track10-starttime0.mp3"></audio>
+        <audio id="audioElementSym" class="audiobutton" src="./BB_music/6-SYMPHONY.mp3"></audio>
+        
+<!-- Prepare general audioelement to hold the audiofiles later:        -->
+        <audio id="audioElementWrapper" class="audiobutton" src="" type="audio/mpeg"></audio>
+<!--------------------------------------------------------------------------->  
+        
+        
+	</head>
+	
+    <body>
+        
+        <!--    First build website structure:-->
+        <div id="wrapper">
+     
+            <!--    Main content of vis            -->  
+            <div id="content">
+
+                    <!-- Three sections: body, disc, music--> 
+                    <div id="BiotaBody">
+                        
+                        <!--  Slideshow of BODY BB_images-->
+                        <img id="slider" src="./BB_images/AllBW-lessBW.jpg" width="300px" height="562px">
+                        
+                    </div>
+
+                    <div id="Disc"></div>
+
+                    <div id="Music" class="music">
+                        
+                        <svg id="equalizersvg" width="425px" height="450px" >
+                            <polyline fill="none" stroke="#444" stroke-width="1"
+                                             points="0,150
+                                                     0,450
+                                                     400,450" />
+                        </svg>
+                    </div> 
+
+            </div> <!--    end of main content    -->
+       
+            <!--    Row with buttons for interactivity    -->        
+            <div id="Buttons_div"></div>
+       
+            <!--    Footer with data details and credits            -->
+            <div id="footer">
+                    <div id="footer-content">
+                    <a href="http://biotabeats.com" target="_blank">Biota Beats</a>  is created by  <a href="http://www.emwbookstore.com/street-bio/" target="_blank">EMW Street Bio team</a>   | Image credit <a href="http://tsevis.tumblr.com/post/72040193609/virus-science-news" target="_blank">Tsevis Visual Design </a> | <a href="https://saramaria.org/" target="_blank">Sara Maria 2017</a>
+                    </div>
+            </div>
+            <!--    Buttons for interactivity with music  -->
+        <div><button id="playpause" onclick="document.getElementById('audioElementWrapper').play()">Play the Audio</button>
+                  <button id="playpause" onclick="document.getElementById('audioElementWrapper').pause()">Pause the Audio</button>
+</div>
+        </div> <!--    #end of content wrapper    -->
+        
+      
+      <!--    Kick-off the Biota Beats creation script!    -->
+      <script src="javascripts/BB_main.js"></script>  
+        
+	</body>
+</html>

@@ -1,0 +1,122 @@
+/*             layout boundary lines*/
+/*
+             *{
+                border: 1px solid orange !important;
+              }
+            
+*/
+            body{
+                font-family: 'Open Sans', sans-serif;
+                font-size:100%; /* flexible baseline  - commonly 16px. Then 1.25em will result in 20px */
+                font-weight:300;
+                height: 100vh; /*30em; 500px;*/
+                width: 100vw; /*full width of screen  /*width:1500px;*/
+                overflow-y: hidden;
+                margin-top: 10;
+                }
+            
+            #content {
+                height:560px; 
+                width:98%;
+                display: -webkit-flex;
+                display: flex;
+                -webkit-flex-direction: row;
+                flex-direction: row;
+                
+                border: 4px solid #CAD0D2 !important;
+                border-radius: 30px;
+                background-color: "none";
+                overflow: hidden;
+            }
+                    
+            #BiotaBody {
+                width:25%;
+                display: flex;
+                display: -webkit-flex;
+            }
+            #Disc {
+                width: 35%;
+                display: flex;
+                display: -webkit-flex;
+            }
+            
+            #Music {
+                width: 35%;
+                margin-left: 20px;
+                display: flex;
+                display: -webkit-flex;
+            }
+
+            /*  For music bar graph    */
+            rect:hover {
+				fill: orange;
+			}
+        
+            /*  For buttons and interaction with them    */
+            #Buttons_div {
+                width: inherit;
+                height: auto;
+                position: static;
+                padding: 15px 10px 5px 10px;
+            }    
+
+            .playmode_buttons {
+              height: 2em; /*height of whole section*/
+              display: -webkit-flex;
+              display:         flex;
+              -webkit-align-items: top;
+                      align-items: top;
+              -webkit-justify-content: center;
+                      justify-content: center;
+                }
+
+            div.playmode_buttons div {
+                width: 8em;
+                height:1.1em;
+                line-height: 1.1em; /*needed for vertical align*/
+                vertical-align: middle;
+                text-align: center;
+                background-color: white;
+                padding: .3em;
+                margin-left: 1em;
+                margin-right: 1em;
+                border-radius: 2em;
+                border:1px solid #9d9999;
+                background-color: "rgb(250, 243, 243)";
+                color:#444;
+                font-weight: 100
+                }    
+ 
+            #footer {
+                text-align: center;
+                font-size: .7em;
+                width:100vw;
+                height:5%; /*2.5em;*/
+                line-height: 2.5sem; 
+                vertical-align: bottom;
+                bottom:0;
+                }
+
+            #footer-content {
+                position: relative;
+                bottom: 0px;
+                left: 0;
+                }
+            
+            #playpause:hover {
+                background-color: #444; 
+                color: white;
+                cursor: hand;
+            }
+
+            a {
+                font-weight: 400;
+                color:#494949;
+                text-decoration:none;
+            }
+        
+            a:hover {
+                color:orange;
+            }
+            
+ 
